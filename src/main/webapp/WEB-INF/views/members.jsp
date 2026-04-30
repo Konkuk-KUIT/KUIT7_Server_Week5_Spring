@@ -76,7 +76,7 @@
 
 <div class="navbar">
     <div>🚀 Member App</div>
-    <a href="/home" class="home-btn">🏠 Home</a>
+    <a href="/front-controller/home" class="home-btn">🏠 Home</a>
 </div>
 
 <div class="container">
