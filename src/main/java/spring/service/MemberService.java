@@ -21,6 +21,7 @@ public class MemberService {
         return members;
     }
 
+    @Transactional(readOnly = true)
     public Member findById(Long id) {
         return members.stream()
                 .filter(m -> m.getId().equals(id))
