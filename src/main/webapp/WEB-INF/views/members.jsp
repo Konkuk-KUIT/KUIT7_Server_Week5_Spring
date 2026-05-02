@@ -76,7 +76,7 @@
 
 <div class="navbar">
     <div>🚀 Member App</div>
-    <a href="/front-controller/home" class="home-btn">🏠 Home</a>
+    <a href="/home" class="home-btn">🏠 Home</a>
 </div>
 
 <div class="container">
@@ -84,13 +84,13 @@
 
     <c:forEach var="m" items="${members}">
         <div class="card">
-            <a href="/front-controller/members/detail?id=${m.id}" class="member-btn">
+            <a href="/members/detail?id=${m.id}" class="member-btn">
                     ${m.name}
             </a>
         </div>
     </c:forEach>
 
-    <a href="/front-controller/members/new-form" class="btn">회원 등록</a>
+    <a href="/members/new-form" class="btn">회원 등록</a>
 </div>
 
 </body>
