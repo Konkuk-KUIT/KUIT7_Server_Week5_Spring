@@ -17,7 +17,7 @@
 
         private final MemberService memberService;
 
-        @GetMapping("/")
+        @GetMapping("")
         public String list(Model model) {
             model.addAttribute("members", memberService.findAll());
             return "members";
@@ -34,7 +34,7 @@
             return "new-form";
         }
 
-        @PostMapping
+        @PostMapping("/save")
         public String save(@RequestParam("name") String name) {
             memberService.save(new Member(name));
             return "redirect:/members";     // 'redirect:' 붙이면 Spring MVC가 redirect로 처리
