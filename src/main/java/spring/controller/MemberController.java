@@ -1,5 +1,6 @@
 package spring.controller;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -8,13 +9,10 @@ import spring.service.MemberService;
 
 @Controller
 @RequestMapping("/members")
+@RequiredArgsConstructor
 public class MemberController {
 
     private final MemberService memberService;
-
-    public MemberController(MemberService memberService) {
-        this.memberService = memberService;
-    }
 
     @GetMapping("/new-form")
     public String newForm() {
