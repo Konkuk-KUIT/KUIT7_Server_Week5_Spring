@@ -60,13 +60,13 @@
 
 <div class="navbar">
     <div>🚀 Member App</div>
-    <a href="/front-controller/home" class="home-btn">🏠 Home</a>
+    <a href="/home" class="home-btn">🏠 Home</a>
 </div>
 
 <div class="container">
     <h1>회원 등록</h1>
 
-    <form method="post" action="/front-controller/members/save">
+    <form method="post" action="/members/save">
         <input name="name" placeholder="이름 입력">
         <button class="btn">등록</button>
     </form>

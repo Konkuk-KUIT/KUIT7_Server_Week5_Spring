@@ -1,4 +1,31 @@
 package spring.service;
 
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import spring.domain.Member;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Service
+@Transactional(readOnly = true)   // ← 클래스 기본값: 읽기 전용
 public class MemberService {
+
+    private final List<Member> members = new ArrayList<>();
+
+    @Transactional   // ← 쓰기 작업만 readOnly = false로 오버라이드
+    public void save(Member member) {
+        members.add(member);
+    }
+
+    public List<Member> findAll() {
+        return members;
+    }
+
+    public Member findById(Long id) {
+        return members.stream()
+                .filter(m -> m.getId().equals(id))
+                .findFirst()
+                .orElse(null);
+    }
 }
