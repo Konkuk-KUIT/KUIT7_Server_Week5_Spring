@@ -3,3 +3,8 @@ spring:
     view:
       prefix: /WEB-INF/views/
       suffix: .jsp
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+    org.springframework.mvc: DEBUG
